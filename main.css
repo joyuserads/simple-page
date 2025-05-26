@@ -1,0 +1,59 @@
+:root{
+    --green: #00FF00;
+    --white: #ffffff;
+    --black:#000000;
+}
+
+.light-theme{
+    --bg: var(--green);
+    --fontColor: var(--black);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
+}
+
+.dark-theme{
+    --bg: var(--black);
+    --fontColor:var(--green);
+     --btnBg: var(--black);
+    --btnFontColor: var(--white);
+}
+
+
+* {  /*  --- O SELETOR "*" É UNIVERSAL E SE APLICA A TODOS OS ELEMENTOS DA PAGINA, EXCETO QND UM SELETOR DE ELEMENTO
+    MAIS ESPECIFICO O SUBSTITUI.*/
+    color: var(--fontColor);
+    font-family: helvetica;
+}
+
+body{
+    font: monospace;
+    background: var(--bg);
+    
+}
+
+ul{
+    font-family: helvetica;
+}
+
+li{
+    list-style: square;
+}
+
+ /*  --- REMOVER O SELETOR #msg.*/
+#msg{
+    font-family: monospace;
+}
+
+.btn{
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    
+}
+
+.btn:focus {outline-style:none;}
