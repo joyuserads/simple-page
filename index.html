@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,16 +9,22 @@
     <script src="app.js"></script>
     <noscript>Você precisa ativar o JavaScript para visualizar todo o conteúdo do site</noscript>
 </head>
-<body class="light-theme">
-    <h1>TASK LIST</h1>
-    <p id="msg">Current tasks</p>   
+
+<body>
+ 
+    <div class="container">
+        <h1>TASK LIST</h1>
+        <p id="msg">Current tasks</p>
         <ul>
             <li class="list">Add visual styles</li>
             <li class="list">Add light and dark themes</li>
             <li>Enable switching the theme</li>
         </ul>
-    <div>
-       <button class="btn">Dark</button>
+
+        <div class="theme-section">
+            <button id="changeThemeBtn">Mudar Tema</button>
+        </div>
     </div>
 </body>
+
 </html>

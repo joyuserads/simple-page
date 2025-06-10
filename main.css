@@ -1,34 +1,80 @@
-:root{
-    --green: #00FF00;
-    --white: #ffffff;
-    --black:#000000;
+body {
+    font-family: 'Poppins', sans-serif; /* Fonte moderna e limpa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    transition: background-color 0.8s ease-in-out; /* Transição mais longa para a mudança de cor */
+    color: #e0e6f0; /* Cor de texto padrão clara */
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Evita rolagem horizontal */
 }
 
-.light-theme{
-    --bg: var(--green);
-    --fontColor: var(--black);
-    --btnBg: var(--black);
-    --btnFontColor: var(--white);
+.theme-section{
+   margin-top: 3em;
+   
+}
+/* Efeito de partícula de fundo (Opcional, para um visual mais complexo) */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top left, rgba(0, 255, 255, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at bottom right, rgba(255, 0, 255, 0.1) 0%, transparent 40%);
+    pointer-events: none; /* Não interfere com cliques */
+    z-index: -1; /* Fica atrás do conteúdo */
 }
 
-.dark-theme{
-    --bg: var(--black);
-    --fontColor:var(--green);
-     --btnBg: var(--black);
-    --btnFontColor: var(--white);
+.container {
+    background-color: rgba(255, 255, 255, 0.08); /* Fundo branco muito sutilmente transparente (glassmorphism base) */
+    backdrop-filter: blur(15px); /* Efeito de vidro fosco */
+    border-radius: 20px; /* Mais arredondado */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil para o efeito de vidro */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* Sombra mais forte para profundidade */
+    padding: 40px; /* Mais preenchimento */
+    width: 100%;
+    max-width: 400px; 
+    text-align: center;
+    position: relative; /* Para z-index se necessário */
+    z-index: 1;
+}
+h1 {
+    color: #220ed156; /* Ciano vibrante para o título */
+    margin-bottom: 30px;
+    font-size: 3em; /* Título maior */
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.6); /* Sombra de texto neon */
+    font-weight: 700;
 }
 
-
-* {  /*  --- O SELETOR "*" É UNIVERSAL E SE APLICA A TODOS OS ELEMENTOS DA PAGINA, EXCETO QND UM SELETOR DE ELEMENTO
-    MAIS ESPECIFICO O SUBSTITUI.*/
-    color: var(--fontColor);
-    font-family: helvetica;
+button {
+    background: linear-gradient(45deg, #00c6ff, #0072ff); /* Gradiente azul vibrante */
+    color: white;
+    border: none;
+    padding: 15px 25px; /* Mais padding */
+    border-radius: 10px; /* Mais arredondado */
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 198, 255, 0.4); /* Sombra com brilho */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
 }
 
-body{
-    font: monospace;
-    background: var(--bg);
-    
+button:hover {
+    background: linear-gradient(45deg, #00aaff, #0056e6); /* Gradiente mais escuro ao hover */
+    transform: translateY(-3px) scale(1.02); /* Efeito de "levantar" e expandir um pouco */
+    box-shadow: 0 6px 15px rgba(0, 198, 255, 0.6);
+}
+
+button:active {
+    transform: translateY(0) scale(0.98); /* Volta ao normal e encolhe levemente ao clicar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(45deg, #0088cc, #0033aa); /* Gradiente ainda mais escuro */
 }
 
 ul{
@@ -36,24 +82,12 @@ ul{
 }
 
 li{
+    color: #000;
     list-style: square;
 }
 
  /*  --- REMOVER O SELETOR #msg.*/
 #msg{
+    color: #0033aa;
     font-family: monospace;
 }
-
-.btn{
-    color: var(--btnFontColor);
-    background-color: var(--btnBg);
-    position: absolute;
-    top: 20px;
-    left: 250px;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    
-}
-
-.btn:focus {outline-style:none;}
